@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mary Market</title>
+    <link rel="icon" href="../images/favicon.png" sizes="16x16"/>
+    <!-- CSS only -->
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/management.css}">
+    <link rel="stylesheet" th:href="@{/css/su.css}">
+    <link rel="stylesheet" th:href="@{/css/itemManagePlus.css}">
+    <link rel="stylesheet" th:href="@{/css/width.css}">
+    <link rel="stylesheet" th:href="@{/css/product.css}">
+    <link rel="stylesheet" th:href="@{/css/template.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script rel ="script" type="text/javascript" src="/js/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+
+    <th:block layout:fragment="css"></th:block>
+
+</head>
+<body>
+
+<div th:replace="fragments/new-header2::header"></div>
+
+<div layout:fragment="content" class="content"></div>
+
+<div th:replace="fragments/footer::footer"></div>
+<th:block layout:fragment="script"></th:block>
+
+</body>
+</html>
