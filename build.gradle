@@ -106,9 +106,7 @@ configurations {
 tasks.named('test') {
     useJUnitPlatform()
 }
-jar {
-    enabled = false // Spring Boot에서는 bootJar를 사용하므로 jar 태스크는 비활성화합니다.
-}
+
 
 bootJar {
     destinationDirectory = file("$buildDir/libs")
