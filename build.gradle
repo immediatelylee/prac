@@ -107,14 +107,12 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 jar {
-    manifest{
-        attributes 'Main-Class' : 'com.prac.prac.PracApplication'
-    }
+    enabled = false // Spring Boot에서는 bootJar를 사용하므로 jar 태스크는 비활성화합니다.
 }
 
-bootJar{
-    destinationDirectory = file("./target") //gradle build 시 jar 파일이 생성되는 파일명 및 위치를 설정한다.
-    archivesBaseName = 'prac'   //프로젝트이름
-    archiveFileName = 'prac.jar' //jar파일명
-    archiveVersion = "0.0.1"
+bootJar {
+    destinationDirectory = file("$buildDir/libs")
+    archivesBaseName = 'project_shoppingmall'
+    archiveFileName = 'project_shoppingmall-v1_1.jar'
+
 }
