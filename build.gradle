@@ -106,11 +106,6 @@ configurations {
 tasks.named('test') {
     useJUnitPlatform()
 }
-jar {
-    manifest{
-        attributes 'Main-Class' : 'com.prac.prac.PracApplication'
-    }
-}
 
 bootJar{
     destinationDirectory = file("./target") //gradle build 시 jar 파일이 생성되는 파일명 및 위치를 설정한다.
